@@ -68,10 +68,11 @@ label span {
     background-color: #ffddde;
     color: #a23433;
     font-size: 20px;
-    padding: 15px 25px 15px 25px;
+    padding: 15px 5px 15px 25px;
     top: 0;
     width: 100%;
     display: none;
+    box-sizing: border-box;
 }
 
 #alert.visible {
