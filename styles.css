@@ -1,0 +1,25 @@
+#site-entry-form {
+    background-color: #a4343a;
+}
+
+#site-id-label-text {
+    color: #FFF;
+    font-family: "Neue Haas Grotesk W01 Disp", Arial, sans-serif;
+}
+
+#site-id {
+    margin-bottom: 1rem;
+    border: 3px solid #FFF;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 10px 16px;
+}
+
+#submit-button {
+    text-decoration: none;
+    color: #a4343a;
+    font-size: 16px;
+    font-family: "Neue Haas Grotesk W01 Disp", Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 2px;
+}
