@@ -10,15 +10,15 @@ SiteData(JSONURL).then(data => {
   var siteCode = document.getElementById("site-id-input");
   btn.disabled = false;
   loading.classList.add("hide");
-  btn.addEventListener("click", function(e){
+  btn.addEventListener("click", function(e) {
     e.preventDefault();
-    var site = data.find(item=>item.code==siteCode.value)
-      if (site == undefined){
-        alertBox.innerHTML = "Site code not found";
-        alertBox.style.display = "block";
-      } else {
-        document.location = site.url;
-      }
+    var site = data.find(item => item.code == siteCode.value)
+    if (site == undefined) {
+      alertBox.classList.add("visible");
+    } else {
+      alertBox.classList.remove("visible");
+      document.location = site.url;
+    }
   });
 })
 

@@ -9,7 +9,11 @@
 </head>
 <body>
 <div id="alert">
-    Invalid Site Code
+    We didn't find that Site Code!
+    <ol>
+        <li>Did you enter the correct Site Code?</li>
+        <li>If it still doesn't work, ask the Volunteer Coordinator for help.</li>
+    </ol>
 </div>
 <div id="container">
     <form id="site-entry-form" autocomplete="off">
@@ -21,7 +25,8 @@
                 <input name="site-id"
                        id="site-id-input"
                        type="tel"
-                       aria-labelledby="site-id-label" />
+                       aria-labelledby="site-id-label"
+                       autofocus/>
             </label>
             <span id="loading"></span>
             <input id="submit-button" name="submit" type="submit" disabled="true"/>

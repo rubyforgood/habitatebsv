@@ -106,9 +106,24 @@ label span {
     background-color: #ffddde;
     color: #a23433;
     font-size: 20px;
-    padding: 15px 25px 15px 25px;
-    position: fixed;
+    padding: 20px 5px 20px 25px;
     top: 0;
     width: 100%;
     display: none;
+    box-sizing: border-box;
+}
+
+#alert.visible {
+    display: block;
+    position: absolute;
+}
+
+#alert li {
+    list-style-type: decimal;
+    list-style-position: outside;
+    font-size: 14px;
+    margin-left: 2.5rem;
+    word-wrap: break-word;
+    padding-right: 2.2rem;
+    padding-top: 0.2rem;
 }
