@@ -65,15 +65,25 @@ label span {
 }
 
 #alert {
-    background-color: #a23433;
+    background-color: #ffddde;
     color: #a23433;
     font-size: 20px;
     padding: 15px 25px 15px 25px;
-    position: fixed;
     top: 0;
     width: 100%;
+    display: none;
 }
 
 #alert.visible {
-    background-color: #ffddde;
+    display: block;
+    position: absolute;
+}
+
+#alert li {
+    list-style-type: decimal;
+    list-style-position: outside;
+    font-size: 14px;
+    margin-left: 2.5rem;
+    word-wrap: break-word;
+    padding-right: 2.2rem;
 }
