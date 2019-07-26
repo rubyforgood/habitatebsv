@@ -12,9 +12,6 @@ body {
     justify-content: center;
 }
 
-#site-entry-form {
-}
-
 #site-entry-form--title {
     color: white;
     font-size: 25px;
@@ -64,4 +61,12 @@ body {
     text-decoration: none;
     white-space: nowrap;
     width: 100%;
+}
+
+#alert {
+    background-color: #ffddde;
+    color: #a23433;
+    border: 3px solid black;
+    font-size: 16px;
+    padding: 15px 20px 15px 35px;
 }
