@@ -4,5 +4,16 @@ const JSONURL = 'https://spreadsheets.google.com/feeds/list/1nntWrfeSWDfaRAnRjz2
 
 SiteData(JSONURL).then(data => {
   //enable button
-  console.log(data) 
+    var btn = document.getElementById("submit-button");
+    var siteCode = document.getElementById("site-id-input");
+
+    btn.addEventListener("click", function(e){
+        e.preventDefault();
+      var site = data.find(item=>item.code==siteCode.value)
+        if (site == undefined){
+          alert('Site code not found!');
+        } else {
+          document.location = site.url;
+        }
+    });
 })
