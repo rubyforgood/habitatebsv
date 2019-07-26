@@ -7,16 +7,18 @@ const btn = document.getElementById("submit-button");
 const loading = document.getElementById("loading");
 
 SiteData(JSONURL).then(data => {
-  var siteCode = document.getElementById("site-id-input");
+  var siteCodeInput = document.getElementById("site-id-input");
   btn.disabled = false;
   loading.classList.add("hide");
-  btn.addEventListener("click", function(e) {
+  btn.addEventListener("click", function (e) {
     e.preventDefault();
     alertBox.classList.remove("visible");
-    var site = data.find(item => item.code === siteCode.value);
+    var site = data.find(item => item.code === siteCodeInput.value);
     if (site === undefined) {
+      siteCodeInput.focus();
       setTimeout(function () {
         alertBox.classList.add("visible");
+        window.scrollTo(0, 0);
       }, 50)
     } else {
       document.location = site.url;
