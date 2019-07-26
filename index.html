@@ -5,17 +5,23 @@
     <title>Habitat Volunteer Sign In</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <script type="text/javascript" src="index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<form id="site-entry-form">
-    <label for="site-id" id="site-id-label">
-        <span id="site-id-label-text">Enter your Site id</span>
-        <input name="site-id"
-               id="site-id"
-               type="tel"
-               aria-labelledby="site-id-label"/>
-    </label>
-    <input id="submit-button" name="submit" type="submit"/>
-</form>
+<div id="container">
+    <form id="site-entry-form">
+        <span id="site-entry-form--title">Find Your Local Site</span>
+        <div id="site-entry-form--body">
+            <label for="site-id-input" id="site-id-label">
+                <span id="site-id-label-text">Enter your Site id</span>
+                <input name="site-id"
+                       id="site-id-input"
+                       type="tel"
+                       aria-labelledby="site-id-label"/>
+            </label>
+            <input id="submit-button" name="submit" type="submit"/>
+        </div>
+    </form>
+</div>
 </body>
 </html>

@@ -1,25 +1,68 @@
-#site-entry-form {
+* {
+    font-family: "Neue Haas Grotesk W01 Disp", Arial, sans-serif;
+}
+
+#container {
     background-color: #a4343a;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#site-entry-form {
+    margin-top: -175px;
+}
+
+#site-entry-form--title {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.32px;
+    display: block;
+    text-align: center;
+}
+
+#site-entry-form--body * {
+    display: block;
+}
+
+#site-entry-form--body {
+    margin: 13px;
 }
 
 #site-id-label-text {
     color: #FFF;
-    font-family: "Neue Haas Grotesk W01 Disp", Arial, sans-serif;
+    margin-bottom: 10px;
 }
 
-#site-id {
+#site-id-input {
     margin-bottom: 1rem;
     border: 3px solid #FFF;
     border-radius: 0;
     background-color: transparent;
     padding: 10px 16px;
+    width: 100%;
+    height: 52px;
+    color: #FFF;
+    box-sizing:border-box;
+    font-size: 16px;
 }
 
 #submit-button {
-    text-decoration: none;
-    color: #a4343a;
-    font-size: 16px;
-    font-family: "Neue Haas Grotesk W01 Disp", Arial, sans-serif;
-    font-weight: bold;
+    background-color: white;
+    border: 0;
     border-radius: 2px;
+    color: #a4343a;
+    cursor: pointer;
+    font-family: "Neue Haas Grotesk W01 Disp", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    height: 52px;
+    padding: 13px;
+    text-decoration: none;
+    white-space: nowrap;
+    width: 100%;
 }
