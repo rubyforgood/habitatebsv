@@ -7,8 +7,8 @@ async function fetchSiteData(jsonURL) {
 function mungeSiteData(rawSiteDataEntries) {
     return rawSiteDataEntries.map(rawSiteDataEntry =>
         ({
-        code: rawSiteDataEntry['gsx$sitecode']['$t'],
-        url: rawSiteDataEntry[`gsx$pre-filledurl`]['$t']
+            code: rawSiteDataEntry['gsx$sitecode']['$t'],
+            url: rawSiteDataEntry['gsx$pre-filledurl']['$t']
         })
     ).filter(site => site.code && site.url) //remove empty
 }
