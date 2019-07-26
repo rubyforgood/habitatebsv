@@ -1,5 +1,11 @@
 @import "reset.css";
 
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 body {
     font-family: "Neue Haas Grotesk W01 Disp", Arial, sans-serif;
 }
@@ -26,6 +32,7 @@ body {
 }
 
 #site-entry-form--body {
+    position: relative;
     margin: 13px;
 }
 
@@ -55,6 +62,7 @@ label span {
     color: #a4343a;
     cursor: pointer;
     font-family: "Neue Haas Grotesk W01 Disp", Arial, sans-serif;
+    transition: all 0.2s ease-in-out;
     font-size: 16px;
     font-weight: bold;
     height: 52px;
@@ -62,6 +70,36 @@ label span {
     text-decoration: none;
     white-space: nowrap;
     width: 100%;
+}
+
+#submit-button[disabled] {
+  font-size: 0;
+}
+
+#loading.hide {
+  display: none;
+}
+
+#loading {
+  height: 52px;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  overflow: hidden;
+  height: 52px;
+}
+
+#loading::after {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(285deg, transparent, #ffddde, transparent );
+  /* background: linear-gradient(100deg,transparent,transparent,rgba(255,0,0,.1),transparent,transparent); */
+  transform: translateX(-100%);
+  animation: loading .9s infinite;
 }
 
 #alert {
