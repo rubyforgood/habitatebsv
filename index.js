@@ -12,13 +12,14 @@ SiteData(JSONURL).then(data => {
   loading.classList.add("hide");
   btn.addEventListener("click", function(e) {
     e.preventDefault();
-    var site = data.find(item => item.code == siteCode.value)
-    if (site == undefined) {
-      alertBox.classList.add("visible");
+    alertBox.classList.remove("visible");
+    var site = data.find(item => item.code === siteCode.value);
+    if (site === undefined) {
+      setTimeout(function () {
+        alertBox.classList.add("visible");
+      }, 50)
     } else {
-      alertBox.classList.remove("visible");
       document.location = site.url;
     }
   });
-})
-
+});
