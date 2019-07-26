@@ -6,19 +6,18 @@ var alertBox = document.getElementById("alert");
 
 SiteData(JSONURL).then(data => {
   //enable button
-    var btn = document.getElementById("submit-button");
-    var siteCode = document.getElementById("site-id-input");
+  var btn = document.getElementById("submit-button");
+  var siteCode = document.getElementById("site-id-input");
 
-    btn.addEventListener("click", function(e){
-        e.preventDefault();
-      var site = data.find(item=>item.code==siteCode.value)
-        if (site == undefined){
-          alertBox.innerHTML = "Site code not found";
-          alertBox.style.display = "block";
-
-        } else {
-          document.location = site.url;
-        }
-    });
+  btn.addEventListener("click", function(e){
+    e.preventDefault();
+    var site = data.find(item=>item.code==siteCode.value)
+      if (site == undefined){
+        alertBox.innerHTML = "Site code not found";
+        alertBox.style.display = "block";
+      } else {
+        document.location = site.url;
+      }
+  });
 })
 
