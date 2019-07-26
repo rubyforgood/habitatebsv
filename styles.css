@@ -6,16 +6,13 @@ body {
 
 #container {
     background-color: #a4343a;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 #site-entry-form {
-    margin-top: -175px;
 }
 
 #site-entry-form--title {
