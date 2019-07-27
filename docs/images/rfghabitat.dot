@@ -1,0 +1,20 @@
+digraph G {
+  rankdir=LR
+
+  subgraph cluster1 {
+    label="Frontend"
+    "Select a Site\nStatic HTML"
+    "Volunteer Sign-in\nGoogle Form" [color=green]
+    "Volunteer Post-sign-in\nGoogle Form" [color=green]
+  }
+  "Sites with Pre-filled URLs\nGoogle Sheet"
+  "Volunteer Sign-in Data\nGoogle Sheet" [color=green]
+
+  "Select a Site\nStatic HTML" ->
+  "Volunteer Sign-in\nGoogle Form" ->
+  "Volunteer Post-sign-in\nGoogle Form"
+
+  "Sites with Pre-filled URLs\nGoogle Sheet" -> "Select a Site\nStatic HTML"
+  "Volunteer Sign-in\nGoogle Form" -> "Volunteer Sign-in Data\nGoogle Sheet"
+  "Volunteer Sign-in Data\nGoogle Sheet" -> "Munge Data" -> "Email CSV"
+}
