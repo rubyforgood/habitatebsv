@@ -1,3 +1,5 @@
 # Habitat for Humanity
 
-An upcoming project for Ruby for Good!
+Enhanced Google Forms ✨
+
+See: [project wiki](https://github.com/rubyforgood/habitatebsv/wiki)
