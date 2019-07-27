@@ -16,5 +16,5 @@ digraph G {
 
   "Sites with Pre-filled URLs\nGoogle Sheet" -> "Select a Site\nStatic HTML"
   "Volunteer Sign-in\nGoogle Form" -> "Volunteer Sign-in Data\nGoogle Sheet"
-  "Volunteer Sign-in Data\nGoogle Sheet" -> "Munge Data" -> "Email CSV"
+  "Volunteer Sign-in Data\nGoogle Sheet" -> "Munge Data" -> "Download CSV"
 }
