@@ -14,8 +14,9 @@ body {
 #container {
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    margin-top: 5rem;
 }
 
 #site-entry-form {
@@ -46,7 +47,7 @@ body {
 
 #site-entry-form--body {
     position: relative;
-    margin: 13px 20%;
+    margin: 13px;
 }
 
 label span {
@@ -66,6 +67,12 @@ label span {
     color: #FFF;
     box-sizing: border-box;
     font-size: 16px;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #logo {
@@ -134,8 +141,10 @@ label span {
 }
 
 #alert.visible {
-    display: block;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #alert li {
