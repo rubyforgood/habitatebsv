@@ -1,4 +1,4 @@
-import {hideLoader, handleClickButton, findSiteFromInput} from './index.js'
+import {hideLoader, handleClickButton, findSiteFromInput} from '../src/index.js'
 import {createTestContainer, tearDownTestContainer} from "./specHelper.js";
 
 describe('index.js', () => {
