@@ -2,26 +2,48 @@ import SiteData from './SiteData.js'
 
 const JSONURL = 'https://spreadsheets.google.com/feeds/list/1nntWrfeSWDfaRAnRjz2CD6VGFnMeKJBYbDqm6i33lr0/od6/public/values?alt=json'
 
-var alertBox = document.getElementById("alert");
-const btn = document.getElementById("submit-button");
-const loading = document.getElementById("loading");
+export function hideLoader() {
+  const loading = document.getElementById("loading");
+  loading.classList.add("hide");
+}
+
+export function redirectTo(location) {
+  document.location = location;
+}
+
+export function findSiteFromInput(data, input) {
+  return data.find(item => item.code === input.value);
+}
+
+function handleSiteNotFound(input, alert) {
+  input.focus();
+  setTimeout(function () {
+    alert.classList.add("visible");
+    window.scrollTo(0, 0);
+  }, 50)
+}
+
+export function handleClickButton(e, data, redirect) {
+  e.preventDefault();
+
+  const alert = document.getElementById("alert");
+  alert.classList.remove("visible");
+
+  const siteCodeInput = document.getElementById("site-id-input");
+  const site = findSiteFromInput(data, siteCodeInput);
+
+  if (site === undefined) {
+    handleSiteNotFound(siteCodeInput, alert)
+  } else {
+    redirect(site.url);
+  }
+}
 
 SiteData(JSONURL).then(data => {
-  var siteCodeInput = document.getElementById("site-id-input");
+  const btn = document.getElementById("submit-button");
   btn.disabled = false;
-  loading.classList.add("hide");
+  hideLoader();
   btn.addEventListener("click", function (e) {
-    e.preventDefault();
-    alertBox.classList.remove("visible");
-    var site = data.find(item => item.code === siteCodeInput.value);
-    if (site === undefined) {
-      siteCodeInput.focus();
-      setTimeout(function () {
-        alertBox.classList.add("visible");
-        window.scrollTo(0, 0);
-      }, 50)
-    } else {
-      document.location = site.url;
-    }
+    handleClickButton(e, data, redirectTo);
   });
 });
