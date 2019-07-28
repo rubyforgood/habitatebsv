@@ -112,7 +112,7 @@ label span {
 }
 
 .loading.hide {
-    display: none !important;
+    display: none;
 }
 
 .loading {
