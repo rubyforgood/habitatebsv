@@ -15,13 +15,13 @@ describe('index.js', () => {
   describe('#hideLoader()', () => {
     it('finds the loader adds the hide class', () => {
       const loader = document.createElement('div');
-      loader.setAttribute('id', 'loading');
+      loader.setAttribute('class', 'loading');
       testContainer.appendChild(loader);
 
       hideLoader();
 
-      const actual = document.getElementById('loading');
-      expect(actual.className).toEqual('hide');
+      const actual = document.querySelector('.loading');
+      expect(actual.className).toContain('hide');
     });
   });
 
@@ -30,7 +30,7 @@ describe('index.js', () => {
       it('adds visible class to alert', () => {
         const data = [];
         const container = document.createElement('div');
-        container.innerHTML = '<div id="alert"></div>' +
+        container.innerHTML = '<div class="alert"></div>' +
             '<input id="site-code-input" type="tel" value="1"/>' +
             '<input type="submit" name="submit" id="submit-button"/>';
         testContainer.appendChild(container);
@@ -39,8 +39,8 @@ describe('index.js', () => {
         handleClickButton(new Event('click'), data);
         jasmine.clock().tick(50);
 
-        const actual = document.getElementById('alert');
-        expect(actual.className).toEqual('visible');
+        const actual = document.querySelector('.alert');
+        expect(actual.className).toContain('visible');
       });
     });
 
@@ -50,7 +50,7 @@ describe('index.js', () => {
           {code: '1', url: 'something'}
         ];
         const container = document.createElement('div');
-        container.innerHTML = '<div id="alert"></div>' +
+        container.innerHTML = '<div class="alert"></div>' +
             '<input id="site-code-input" type="tel" value="1"/>' +
             '<input type="submit" name="submit" id="submit-button"/>';
         testContainer.appendChild(container);

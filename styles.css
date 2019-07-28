@@ -19,7 +19,7 @@ body {
     background-color: var(--main-color);
 }
 
-#container {
+.container {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -48,7 +48,7 @@ body {
     margin-bottom: 2rem;
 }
 
-#site-entry-form--body * {
+.label-text {
     display: block;
 }
 
@@ -104,24 +104,26 @@ label span {
     text-decoration: none;
     white-space: nowrap;
     width: 100%;
+    display: block;
 }
 
 #submit-button[disabled] {
     font-size: 0;
 }
 
-#loading.hide {
-    display: none;
+.loading.hide {
+    display: none !important;
 }
 
-#loading {
+.loading {
+    display: block;
     height: 52px;
     width: 100%;
     overflow: hidden;
     position: absolute;
 }
 
-#loading::after {
+.loading::after {
     content: '';
     position: absolute;
     top: 0;
@@ -133,7 +135,7 @@ label span {
     animation: loading .9s infinite;
 }
 
-#alert {
+.alert {
     background-color: var(--alert-bg-color);
     color: var(--alert-text-color);
     font-size: 20px;
@@ -144,14 +146,14 @@ label span {
     box-sizing: border-box;
 }
 
-#alert.visible {
+.alert.visible {
     position: absolute;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-#alert li {
+.alert li {
     list-style-type: decimal;
     list-style-position: outside;
     font-size: 14px;

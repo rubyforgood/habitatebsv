@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div id="alert">
+<div class="alert">
     We didn't find that Site Code!
     <ol>
         <li>Did you enter the correct Site Code?</li>
@@ -19,7 +19,7 @@
 <div id="logo-container">
     <img id="logo" src="hfh-logo.jpg"/>
 </div>
-<div id="container">
+<div class="container">
     <form id="site-entry-form" autocomplete="off">
         <div id="site-entry-form--heading">
         </div>
@@ -28,16 +28,16 @@
         </div>
         <div id="site-entry-form--body">
             <label for="site-code-input" id="site-code-label">
-                <span>Enter the Site Code.</span>
-                <span>For help, ask your Site Supervisor.</span>
+                <span class="label-text">Enter the Site Code.</span>
+                <span class="label-text">For help, ask your Site Supervisor.</span>
                 <input name="site-code"
                        id="site-code-input"
                        type="tel"
                        aria-labelledby="site-code-label"
                        autofocus/>
             </label>
-            <span id="loading"></span>
-            <input id="submit-button" name="submit" type="submit" disabled="true"/>
+            <span class="loading"></span>
+            <input id="submit-button" name="submit" type="submit" disabled/>
         </div>
     </form>
 </div>
