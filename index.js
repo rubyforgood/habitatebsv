@@ -29,7 +29,7 @@ export function handleClickButton(e, data, redirect) {
   const alert = document.getElementById("alert");
   alert.classList.remove("visible");
 
-  const siteCodeInput = document.getElementById("site-id-input");
+  const siteCodeInput = document.getElementById("site-code-input");
   const site = findSiteFromInput(data, siteCodeInput);
 
   if (site === undefined) {

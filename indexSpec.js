@@ -31,7 +31,7 @@ describe('index.js', () => {
         const data = [];
         const container = document.createElement('div');
         container.innerHTML = '<div id="alert"></div>' +
-            '<input id="site-id-input" type="tel" value="1"/>' +
+            '<input id="site-code-input" type="tel" value="1"/>' +
             '<input type="submit" name="submit" id="submit-button"/>';
         testContainer.appendChild(container);
 
@@ -51,7 +51,7 @@ describe('index.js', () => {
         ];
         const container = document.createElement('div');
         container.innerHTML = '<div id="alert"></div>' +
-            '<input id="site-id-input" type="tel" value="1"/>' +
+            '<input id="site-code-input" type="tel" value="1"/>' +
             '<input type="submit" name="submit" id="submit-button"/>';
         testContainer.appendChild(container);
 
@@ -65,7 +65,7 @@ describe('index.js', () => {
   });
 
   describe('#findSiteFromInput()', () => {
-    it('returns site when code from input exists in lookup data', () => {
+    it('returns site when site code from input exists in lookup data', () => {
       const data = [
         {code: '1234', url: 'something.com'}
       ];
@@ -74,7 +74,7 @@ describe('index.js', () => {
       expect(findSiteFromInput(data, input)).toEqual(data[0]);
     });
 
-    it('returns undefined when code from input does not exist in lookup data', () => {
+    it('returns undefined when site code from input does not exist in lookup data', () => {
       const data = [
         {code: '1234', url: 'something.com'}
       ];
